@@ -14,6 +14,10 @@ HOSTS:
     box: centos/7
     hypervisor: <%= hypervisor %>
     yum_repos:
+      chef-current:
+        baseurl: 'https://packages.chef.io/repos/yum/current/el/7/$basearch'
+        gpgkeys:
+          - https://packages.chef.io/chef.asc
       simp:
         baseurl: https://packagecloud.io/simp-project/6_X_Dependencies/el/7/$basearch
         gpgkeys:
@@ -25,6 +29,10 @@ HOSTS:
     box: centos/6
     hypervisor: <%= hypervisor %>
     yum_repos:
+      chef-current:
+        baseurl: 'https://packages.chef.io/repos/yum/current/el/6/$basearch'
+        gpgkeys:
+          - https://packages.chef.io/chef.asc
       simp:
         baseurl: https://packagecloud.io/simp-project/6_X_Dependencies/el/6/$basearch
         gpgkeys:
